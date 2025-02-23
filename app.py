@@ -49,8 +49,6 @@ def predict(X_new, ohe, scaler, best_model, le_dict):
 ohe, scaler, best_model, le_dict = load_models()
 
 st.title("Customer Response Prediction")
-
-# User input form
 with st.form("prediction_form"):
     st.subheader("Enter Customer Details")
     age = st.number_input("Age", min_value=18, max_value=100)
@@ -86,7 +84,6 @@ if submit_button:
     })
     
     prediction = predict(data, ohe, scaler, best_model, le_dict)
-    st.write(f'{prediction[0]}')
     st.success(f"Prediction: {'Interested' if prediction[0] == 1 else 'Not Interested'}")
 
 st.subheader("Upload CSV for Batch Predictions")

@@ -16,7 +16,7 @@ with open("ohe_2.pkl", "rb") as f:
 with open("scaler2.pkl", "rb") as f:
     scaler = pickle.load(f)
 
-st.title("Car Price Prediction App 🚗W")
+st.title("Car Price Prediction App 🚗")
 
 models = ['Alto', 'Grand', 'i20', 'Ecosport', 'Wagon R', 'i10', 'Venue',
           'Swift', 'Verna', 'Duster', 'Cooper', 'Ciaz', 'C-Class', 'Innova',
